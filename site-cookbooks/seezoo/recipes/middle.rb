@@ -18,7 +18,16 @@ end
   end
 end
 
-# Edit MySQL (my.cnf)
+# Copy httpd.conf
+cookbook_file "/etc/httpd/conf/httpd.conf" do
+  source "httpd.conf"
+  owner "root"
+  group "root"
+  mode 0644
+  notifies :restart, 'service[httpd]'
+end
+
+# Copy my.cnf
 cookbook_file "/etc/my.cnf" do
   source "my.cnf"
   owner "root"
