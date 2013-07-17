@@ -1,5 +1,10 @@
 {
 	"run_list":[
-		"yum::epel"
-	]
+		// "yum::epel",
+		// "seezoo::default",
+		"seezoo::middle"
+	],
+	"mysql": {
+		
+	}
 }
