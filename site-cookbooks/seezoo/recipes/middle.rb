@@ -1,3 +1,10 @@
+# Install Zip and Unzip
+%w{zip unzip}.each do |pkg|
+  package pkg do
+    action :install
+  end
+end
+
 # Install httpd
 package "httpd" do
   version "2.2.15-28.el6.centos"
@@ -14,6 +21,13 @@ end
 %w{php php-mbstring php-mysql}.each do |pkg|
   package pkg do
     version "5.3.3-23.el6_4"
+    action :install
+  end
+end
+
+# Install Git and Mercurial
+%w{git mercurial}.each do |pkg|
+  package pkg do
     action :install
   end
 end
