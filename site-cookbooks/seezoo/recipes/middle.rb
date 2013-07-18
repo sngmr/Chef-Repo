@@ -18,16 +18,9 @@ package "mysql-server" do
 end
 
 # Install PHP
-%w{php php-mbstring php-mysql}.each do |pkg|
+%w{php php-mbstring php-gd php-mysql}.each do |pkg|
   package pkg do
     version "5.3.3-23.el6_4"
-    action :install
-  end
-end
-
-# Install Git and Mercurial
-%w{git mercurial}.each do |pkg|
-  package pkg do
     action :install
   end
 end

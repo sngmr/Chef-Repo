@@ -1,8 +1,8 @@
 {
 	"run_list":[
-		// "yum::epel",
-		// "seezoo",
-		// "seezoo::middle",
+		"yum::epel",
+		"seezoo",
+		"seezoo::middle",
 		"seezoo::app"
 	],
 	"mysql": {
